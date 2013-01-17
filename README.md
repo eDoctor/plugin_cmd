@@ -9,3 +9,4 @@ plugin_cmd
 
 ## generate overwrite extention
 	rails g extension front course
+

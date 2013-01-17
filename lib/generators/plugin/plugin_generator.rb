@@ -2,7 +2,6 @@ require 'thor'
 class PluginGenerator < Rails::Generators::NamedBase
 
   desc "builds a module extension"
-  #argument :file_name, :type => :string, :desc => 'rails extention app_path', :default => '.'
   argument :mod, :type => :string, :desc => 'rails module app_path', :default => '.'
 
   class_option :path, :type => :string, :default => false,
@@ -19,7 +18,7 @@ class PluginGenerator < Rails::Generators::NamedBase
     directory 'lib', "#{path}#{file_name}/lib"
     directory 'script', "#{path}#{file_name}/script"
 
-    template 'extension.gemspec', "#{path}#{file_name}/#{file_name}.gemspec"
+    template 'extension.gemspec', "#{path}#{file_name}/#{module_name}_#{file_name}.gemspec"
     template 'Gemfile', "#{path}#{file_name}/Gemfile"
     template 'gitignore', "#{path}#{file_name}/.gitignore"
     template 'LICENSE', "#{path}#{file_name}/LICENSE"
