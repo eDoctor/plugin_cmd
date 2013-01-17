@@ -11,13 +11,9 @@ class PluginGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates/plugin', __FILE__)
 
   def generate
-    puts name
-    puts file_name
-    puts mod
-
     path = options[:path] ? "#{options[:path]}/" : nil
 
-    empty_directory "#{path}file_name"
+    empty_directory "#{path}#{file_name}"
 
     directory 'app', "#{path}#{file_name}/app"
     directory 'lib', "#{path}#{file_name}/lib"
