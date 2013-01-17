@@ -8,4 +8,4 @@ plugin_cmd
 	rails g plugin auth course
 
 ## generate overwrite extention
-	rails g plugin front course
+	rails g extension front course
