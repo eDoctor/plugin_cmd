@@ -1,0 +1,7 @@
+module <%= module_label %>
+  module <%= class_name %>
+
+  end
+end
+
+require '<%= module_name %>/<%= file_name %>/engine'

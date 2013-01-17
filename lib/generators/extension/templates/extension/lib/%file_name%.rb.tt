@@ -1,0 +1,2 @@
+require '<%= mod %>_core'
+require '<%=file_name%>/engine'
