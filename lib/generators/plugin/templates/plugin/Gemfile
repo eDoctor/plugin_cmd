@@ -1,5 +1,3 @@
-source 'http://rubygems.org'
-
-# Provides basic authentication functionality for testing parts of your engine
+eval(File.read(File.dirname(__FILE__) + '/../common_dependencies.rb'))
 
 gemspec

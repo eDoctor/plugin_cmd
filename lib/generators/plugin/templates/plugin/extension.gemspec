@@ -1,8 +1,10 @@
 # encoding: UTF-8
+version = File.read(File.expand_path("../../VERSION", __FILE__)).strip
+
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = '<%= module_name %>_<%= file_name %>'
-  s.version     = '0.0.1'
+  s.version     = version
   s.summary     = 'TODO: Add gem summary here'
   s.description = 'TODO: Add (optional) gem description here'
   s.required_ruby_version = '>= 1.9.3'
@@ -16,12 +18,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
+  s.add_dependency 'course_core', version
 
-  s.add_development_dependency 'capybara', '~> 1.1.2'
-  s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'factory_girl', '~> 2.6.4'
-  s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'rspec-rails',  '~> 2.9'
-  s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'sqlite3'
 end
