@@ -1,8 +1,7 @@
 require 'thor'
-class ExtensionGenerator < Rails::Generators::Base#  Rails::Generators::NamedBase
+class ExtensionGenerator < Rails::Generators::NamedBase
+  desc "builds an overwrite extension"
 
-  desc "builds a overwrite extension"
-  argument :file_name, :type => :string, :desc => 'rails app_path', :default => '.'
   argument :mod, :type => :string, :desc => 'core module name', :default => '.'
 
   source_root File.expand_path('../templates/extension', __FILE__)
@@ -36,6 +35,10 @@ class ExtensionGenerator < Rails::Generators::Base#  Rails::Generators::NamedBas
 
     def module_label
       Thor::Util.camel_case mod
+    end
+
+    def file_name
+      @file_name ||= Thor::Util.snake_case(name)
     end
 
     def course_version

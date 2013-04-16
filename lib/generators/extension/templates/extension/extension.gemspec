@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version     = '0.0.1'
   s.summary     = 'TODO: Add gem summary here'
   s.description = 'TODO: Add (optional) gem description here'
-  s.required_ruby_version = '>= 1.8.7'
+  s.required_ruby_version = '>= 1.9.3'
 
   # s.author    = 'You'
   # s.email     = 'you@example.com'
@@ -17,11 +17,4 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
 
-  s.add_development_dependency 'capybara', '~> 1.1.2'
-  s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'factory_girl', '~> 2.6.4'
-  s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'rspec-rails',  '~> 2.9'
-  s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'sqlite3'
 end

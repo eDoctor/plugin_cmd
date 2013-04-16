@@ -46,7 +46,7 @@ class PluginGenerator < Rails::Generators::NamedBase
     end
 
     def file_name
-      @file_name = Thor::Util.snake_case(name)
+      @file_name ||= Thor::Util.snake_case(name)
     end
 
     def course_version
